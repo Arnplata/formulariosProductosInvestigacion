@@ -1,0 +1,249 @@
+
+body{
+    margin: 0;
+}
+
+h2 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans', sans-serif;
+    display: inline-block;
+    font-size: 30px;
+    color: var(--oscuro);
+    margin-left: var(--col-1);
+}
+
+.logo{
+    background-image: url("assets/aragon_logo.png");
+    background-size: cover;
+    width: 8rem;
+    height: 7rem;
+    margin-right: 4.33%;
+    filter: grayscale(1);
+}
+
+
+.subTitulo h2{
+    margin: 0;font-family: 'Poppins';font-size: 24px;font-weight: 500;z-index: 10;background-color: white;margin-left: 1.5em;width: 10.5em;text-align: center;
+}
+
+.subTitulo{
+    margin-top: 0.3em;
+    margin-left: 1.33em;
+    width: 32rem;
+    display: flex;
+    align-items: center;
+}
+
+.subTitulo.subForm{
+
+width: 100%;
+
+margin-left: 0;
+}
+
+.subTitulo.subTitulo.subForm h2{
+    margin: 0;
+    font-family: 'Josefin Sans';
+    font-size: 32px;
+    font-weight: 500;
+    z-index: 10;
+    background-color: white;
+    margin-left: 1.5em;
+    width: fit-content;
+    padding: 0em 0.5em 0 0.4em;
+    text-align: center;
+}
+
+.subTitulo.subForm .line{
+
+width: 100%;
+
+height: 3px;
+
+background-color: var(--oscuro);
+
+z-index: 1;
+
+position: absolute;
+
+}
+
+.subTitulo .line{
+
+width: 31rem;
+
+height: 3px;
+
+background-color: var(--oscuro);
+
+z-index: 1;
+
+position: absolute;
+}
+
+h1{
+   font-weight: 600;
+   text-transform: uppercase;
+   font-family: 'Josefin Sans', sans-serif;
+   display: inline-block;
+   font-size: 37px;
+   color: var(--oscuro);
+   margin-left: 2.33%;
+   width: 32rem;
+   margin-bottom: 0;
+   margin-top: 1.2rem;
+}
+
+p {
+    font-size: 16px;
+    line-height: 10px;
+    text-align: justify;
+    color: var(--texto-principal);
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+    font-size: 16px;
+    line-height: 10px;
+    text-align: justify;
+    color: var(--texto-principal);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,label {
+    margin: .4rem 0;
+} */
+
+.formWrapper{
+    
+display: flex;
+    
+width: 100%;
+    
+justify-content: center;
+    
+margin: 3em 0;
+}
+
+.hder{
+    
+margin-bottom: 3em;
+    
+display: flex;
+    
+justify-content: space-between;
+    
+align-items: center;
+}
+
+
+.form {width: 50vw;border: 3px solid var(--texto-oscuro);padding: 1em 1em 0em 1em;border-radius: 11px;}
+
+p{
+
+font-weight: 600;
+
+font-size: 17px;
+}
+
+.formField{
+    display: flex;
+    flex-direction: column;
+}
+
+.formField div{margin-bottom: 1em;}
+
+.formField p{margin-top: 0em;}
+
+/* .formField select{margin-bottom: 1em;} */
+
+.formField label{font-weight: 600;font-size: 17px;margin-right: 0.5em;color: var(--texto-principal);}
+
+.formPublicaciones .formato-tipo{}
+
+.radioBot{
+    margin-bottom: 0em !important   ;
+}
+
+.radioTop{
+    margin-bottom: .5em !important;
+}
+
+.inptLarge{
+    
+display: flex;
+    
+flex-direction: column;
+    
+height: 3em;
+    
+justify-content: space-between;
+}
+
+.referencias{
+
+display: flex;
+
+justify-content: space-around;
+
+align-items: center;
+}
+
+.referencias input{
+    margin: 0;
+    margin-right: .5em;
+}
+
+
+.opt label{
+    font-weight: 100;
+
+}
+
+.formPublicaciones .referencias .referencias-1 {
+
+}
+
+.formPublicaciones .referencias .referencias-2{
+}
+
+.tooltip-right {
+    position: relative;
+    width: fit-content;
+  }
+  
+  .tooltip-right .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+    font-family: 'Poppins';
+    font-size: 14px;
+  }
+  
+  .tooltip-right .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+  }
+  .tooltip-right:hover .tooltiptext {
+    visibility: visible;
+  }
