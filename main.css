@@ -233,6 +233,13 @@ align-items: center;
     font-family: 'Poppins';
     font-size: 14px;
   }
+
+  .otro{
+      
+display: flex;
+      
+align-items: center;
+  }
   
   .tooltip-right .tooltiptext::after {
     content: "";
