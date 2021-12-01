@@ -3,6 +3,8 @@ body{
     margin: 0;
 }
 
+
+
 h2 {
     font-weight: 400;
     text-transform: uppercase;
@@ -35,6 +37,32 @@ h2 {
     align-items: center;
 }
 
+input[type="submit" i] {
+    appearance: auto;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+    color: -internal-light-dark(black, white);
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    border: 0;
+    width: 8em;
+    height: 2em;
+    border-radius: 5px;
+    background-color: var(--oscuro);
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 600;
+    cursor: pointer;
+}
+
 .subTitulo.subForm{
 
 width: 100%;
@@ -49,7 +77,7 @@ margin-left: 0;
     font-weight: 500;
     z-index: 10;
     background-color: white;
-    margin-left: 1.5em;
+    margin-left: 2.5rem;
     width: fit-content;
     padding: 0em 0.5em 0 0.4em;
     text-align: center;
@@ -126,14 +154,16 @@ display: flex;
     
 width: 100%;
     
-justify-content: center;
+justify-content: space-around;
+    
+align-items: center;
     
 margin: 3em 0;
+    
+flex-direction: column;
 }
 
 .hder{
-    
-margin-bottom: 3em;
     
 display: flex;
     
@@ -240,6 +270,17 @@ display: flex;
       
 align-items: center;
   }
+
+  .contButton{
+      
+width: 50vw;
+      
+display: flex;
+      
+justify-content: flex-end;
+      
+margin-top: 2em;
+  }
   
   .tooltip-right .tooltiptext::after {
     content: "";
@@ -254,3 +295,94 @@ align-items: center;
   .tooltip-right:hover .tooltiptext {
     visibility: visible;
   }
+
+.pasoCont{
+    
+display: flex;
+    
+margin-left: 3vw;
+    
+margin-bottom: 3em;
+    
+width: 85vw;
+    
+margin-top: 3em;
+}
+
+.pasoTitCont{
+
+font-family: 'Poppins';
+
+border-left: 3px solid var(--oscuro);
+
+padding-left: 0.5em;
+}
+
+.pasoTitCont .pasoNum{font-weight: 600;font-size: 25px;}
+
+.pasoTitCont .pasoTit{
+      
+font-weight: 500;
+}
+
+.pasoDesc{
+    
+font-family: 'Poppins';
+    
+width: 76em;
+    
+margin-left: 3em;
+}
+
+.tableWrapper{
+    
+width: 100%;
+    
+display: flex;
+    
+flex-direction: column;
+    
+align-items: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: calc(50vw + 2em);
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.boton{
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--oscuro);
+    color: white;
+    font-family: 'Poppins';
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.2em 25px;
+    font-size: 18px;
+}
+
+.resumenTitle{
+    
+font-family: 'Poppins';
+    
+font-size: 22px;
+    
+margin-bottom: 0.5em;
+    
+font-weight: 500;
+}
+
+.selectTipoProy{
+}
