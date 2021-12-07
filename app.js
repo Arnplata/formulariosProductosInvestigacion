@@ -469,6 +469,10 @@ function agregarEnTabla(t) {
     }
 }
 
+function envio() {
+    alert("Datos Enviados Correctamente!");
+}
+
 
 
 
@@ -1417,7 +1421,7 @@ var pasos = [
         </div>
     
         <div class="pasoDesc">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, suscipit? Amet dolorem blanditiis quia optio nesciunt illo neque, quos error alias numquam facere quam, doloribus vero libero reiciendis nulla totam.
+        <strong>Instrucciones:</strong> Llenar el formulario correspondiente a los proyectos de investigación, en la tabla apareceran los proyectos capturados. Al terminar da click en el botón: <strong>CONTINUAR PASO 2</strong>
         </div>
     </div>
     `,
@@ -1431,7 +1435,7 @@ var pasos = [
         </div>
     
         <div class="pasoDesc">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, suscipit? Amet dolorem blanditiis quia optio nesciunt illo neque, quos error alias numquam facere quam, doloribus vero libero reiciendis nulla totam.
+            Elegir el <strong>Producto de Investigación</strong> y llenar la información correspondiente en el <strong>formulario</strong>, los datos aparecerán en la tabla inferior, una vez terminado de capturar los productos de investigación necesarios dar click en el boton <strong>CONTINUAR PASO 3</strong>
         </div>
     </div>
 
@@ -1473,7 +1477,7 @@ var pasos = [
         </div>
     
         <div class="pasoDesc">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, suscipit? Amet dolorem blanditiis quia optio nesciunt illo neque, quos error alias numquam facere quam, doloribus vero libero reiciendis nulla totam.
+            Revisa que la información capturada sea la correcta mediante las tablas que aparecen en pantalla y da click en el botón de: <strong>FINALIZAR Y ENVIAR</strong> para terminar el proceso.
         </div>
     </div>
     `,
