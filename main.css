@@ -1,66 +1,66 @@
 
 body{
-    margin: 0;
+  margin: 0;
 }
 
 
 
 h2 {
-    font-weight: 400;
-    text-transform: uppercase;
-    font-family: 'Josefin Sans', sans-serif;
-    display: inline-block;
-    font-size: 30px;
-    color: var(--oscuro);
-    margin-left: var(--col-1);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-family: 'Josefin Sans', sans-serif;
+  display: inline-block;
+  font-size: 30px;
+  color: var(--oscuro);
+  margin-left: var(--col-1);
 }
 
 .logo{
-    background-image: url("assets/aragon_logo.png");
-    background-size: cover;
-    width: 8rem;
-    height: 7rem;
-    margin-right: 4.33%;
-    filter: grayscale(1);
+  background-image: url("assets/aragon_logo.png");
+  background-size: cover;
+  width: 8rem;
+  height: 7rem;
+  margin-right: 4.33%;
+  filter: grayscale(1);
 }
 
 
 .subTitulo h2{
-    margin: 0;font-family: 'Poppins';font-size: 24px;font-weight: 500;z-index: 10;background-color: white;margin-left: 1.5em;width: 10.5em;text-align: center;
+  margin: 0;font-family: 'Poppins';font-size: 24px;font-weight: 500;z-index: 10;background-color: white;margin-left: 1.5em;width: 10.5em;text-align: center;
 }
 
 .subTitulo{
-    margin-top: 0.3em;
-    margin-left: 1.33em;
-    width: 32rem;
-    display: flex;
-    align-items: center;
+  margin-top: 0.3em;
+  margin-left: 1.33em;
+  width: 32rem;
+  display: flex;
+  align-items: center;
 }
 
 input[type="submit" i] {
-    appearance: auto;
-    user-select: none;
-    white-space: pre;
-    align-items: flex-start;
-    text-align: center;
-    cursor: default;
-    box-sizing: border-box;
-    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
-    color: -internal-light-dark(black, white);
-    padding: 1px 6px;
-    border-width: 2px;
-    border-style: outset;
-    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-    border-image: initial;
-    border: 0;
-    width: 8em;
-    height: 2em;
-    border-radius: 5px;
-    background-color: var(--oscuro);
-    color: white;
-    font-family: 'Poppins';
-    font-weight: 600;
-    cursor: pointer;
+  appearance: auto;
+  user-select: none;
+  white-space: pre;
+  align-items: flex-start;
+  text-align: center;
+  cursor: default;
+  box-sizing: border-box;
+  background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
+  color: -internal-light-dark(black, white);
+  padding: 1px 6px;
+  border-width: 2px;
+  border-style: outset;
+  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  border: 0;
+  width: 8em;
+  height: 2em;
+  border-radius: 5px;
+  background-color: var(--oscuro);
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 600;
+  cursor: pointer;
 }
 
 .subTitulo.subForm{
@@ -71,16 +71,16 @@ margin-left: 0;
 }
 
 .subTitulo.subTitulo.subForm h2{
-    margin: 0;
-    font-family: 'Josefin Sans';
-    font-size: 32px;
-    font-weight: 500;
-    z-index: 10;
-    background-color: white;
-    margin-left: 2.5rem;
-    width: fit-content;
-    padding: 0em 0.5em 0 0.4em;
-    text-align: center;
+  margin: 0;
+  font-family: 'Josefin Sans';
+  font-size: 32px;
+  font-weight: 500;
+  z-index: 10;
+  background-color: white;
+  margin-left: 2.5rem;
+  width: fit-content;
+  padding: 0em 0.5em 0 0.4em;
+  text-align: center;
 }
 
 .subTitulo.subForm .line{
@@ -111,64 +111,64 @@ position: absolute;
 }
 
 h1{
-   font-weight: 600;
-   text-transform: uppercase;
-   font-family: 'Josefin Sans', sans-serif;
-   display: inline-block;
-   font-size: 37px;
-   color: var(--oscuro);
-   margin-left: 2.33%;
-   width: 32rem;
-   margin-bottom: 0;
-   margin-top: 1.2rem;
+ font-weight: 600;
+ text-transform: uppercase;
+ font-family: 'Josefin Sans', sans-serif;
+ display: inline-block;
+ font-size: 37px;
+ color: var(--oscuro);
+ margin-left: 2.33%;
+ width: 32rem;
+ margin-bottom: 0;
+ margin-top: 1.2rem;
 }
 
 p {
-    font-size: 16px;
-    line-height: 10px;
-    text-align: justify;
-    color: var(--texto-principal);
-    font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 10px;
+  text-align: justify;
+  color: var(--texto-principal);
+  font-family: 'Poppins', sans-serif;
 }
 
 label {
-    font-size: 16px;
-    line-height: 10px;
-    text-align: justify;
-    color: var(--texto-principal);
-    font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 10px;
+  text-align: justify;
+  color: var(--texto-principal);
+  font-family: 'Poppins', sans-serif;
 }
 
 /* label {
-    display: block;
-    font: 1rem 'Fira Sans', sans-serif;
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
 }
 
 input,label {
-    margin: .4rem 0;
+  margin: .4rem 0;
 } */
 
 .formWrapper{
-    
+  
 display: flex;
-    
+  
 width: 100%;
-    
+  
 justify-content: space-around;
-    
+  
 align-items: center;
-    
+  
 margin: 3em 0;
-    
+  
 flex-direction: column;
 }
 
 .hder{
-    
+  
 display: flex;
-    
+  
 justify-content: space-between;
-    
+  
 align-items: center;
 }
 
@@ -183,8 +183,8 @@ font-size: 17px;
 }
 
 .formField{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .formField div{margin-bottom: 1em;}
@@ -198,21 +198,21 @@ font-size: 17px;
 .formPublicaciones .formato-tipo{}
 
 .radioBot{
-    margin-bottom: 0em !important   ;
+  margin-bottom: 0em !important   ;
 }
 
 .radioTop{
-    margin-bottom: .5em !important;
+  margin-bottom: .5em !important;
 }
 
 .inptLarge{
-    
+  
 display: flex;
-    
+  
 flex-direction: column;
-    
+  
 height: 3em;
-    
+  
 justify-content: space-between;
 }
 
@@ -226,13 +226,13 @@ align-items: center;
 }
 
 .referencias input{
-    margin: 0;
-    margin-right: .5em;
+  margin: 0;
+  margin-right: .5em;
 }
 
 
 .opt label{
-    font-weight: 100;
+  font-weight: 100;
 
 }
 
@@ -244,68 +244,72 @@ align-items: center;
 }
 
 .tooltip-right {
-    position: relative;
-    width: fit-content;
-  }
-  
-  .tooltip-right .tooltiptext {
-    visibility: hidden;
-    width: max-content;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 10px;
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 110%;
-    font-family: 'Poppins';
-    font-size: 14px;
-  }
+  position: relative;
+  width: fit-content;
+}
 
-  .otro{
-      
+.tooltip-right .tooltiptext {
+  visibility: hidden;
+  width: max-content;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 10px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+  font-family: 'Poppins';
+  font-size: 14px;
+}
+
+.otro{
+    
 display: flex;
-      
+    
 align-items: center;
-  }
+}
 
-  .contButton{
-      
+.contButton{
+    
 width: 50vw;
-      
+    
 display: flex;
-      
+    
 justify-content: flex-end;
-      
+    
 margin-top: 2em;
-  }
-  
-  .tooltip-right .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-  }
-  .tooltip-right:hover .tooltiptext {
-    visibility: visible;
-  }
+}
+
+.navButton{
+  display: flex;
+}
+
+.tooltip-right .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+.tooltip-right:hover .tooltiptext {
+  visibility: visible;
+}
 
 .pasoCont{
-    
+  
 display: flex;
-    
+  
 margin-left: 3vw;
-    
+  
 margin-bottom: 3em;
-    
+  
 width: 85vw;
-    
+  
 margin-top: 3em;
 }
 
@@ -321,68 +325,81 @@ padding-left: 0.5em;
 .pasoTitCont .pasoNum{font-weight: 600;font-size: 25px;}
 
 .pasoTitCont .pasoTit{
-      
+    
 font-weight: 500;
 }
 
 .pasoDesc{
-    
+  
 font-family: 'Poppins';
-    
+  
 width: 76em;
-    
+  
 margin-left: 3em;
 }
 
 .tableWrapper{
-    
+  
 width: 100%;
-    
+  
 display: flex;
-    
+  
 flex-direction: column;
-    
+  
 align-items: center;
+  
+margin-bottom: 2em;
 }
 
+#contBotonPaso{width: 100%;display: flex;align-items: center;margin-bottom: 4em;margin-top: 4em;justify-content: space-evenly;}
+
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: calc(50vw + 2em);
-  }
-  
-  td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #dddddd;
-  }
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: calc(50vw + 2em);
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
 
 .boton{
-    border: 0;
-    border-radius: 5px;
-    background-color: var(--oscuro);
-    color: white;
-    font-family: 'Poppins';
-    font-weight: 600;
-    cursor: pointer;
-    padding: 0.2em 25px;
-    font-size: 18px;
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--oscuro);
+  color: white;
+  font-family: 'Poppins';
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.2em 25px;
+  font-size: 18px;
 }
 
 .resumenTitle{
-    
+  
 font-family: 'Poppins';
-    
+  
 font-size: 22px;
-    
+  
 margin-bottom: 0.5em;
-    
+  
 font-weight: 500;
 }
 
 .selectTipoProy{
+}
+
+#contForm table{
+  
+margin-top: 1em;
+  
+margin-bottom: 5em;
+  
+width: 65vw;
 }
