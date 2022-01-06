@@ -14,7 +14,7 @@
 <body>
 
    
-<section class="hder">
+<section class="hder" style="display: none;">
     <div>
         <h1>PRODUCTOS DE INVESTIGACIÓN DE LOS PROFESORES DE CARRERA</h1>
         <div class="subTitulo">
@@ -28,102 +28,141 @@
     </div>
 </section>
 
+<section id="menuCont">
+    <div class="pasoBtn active" onclick="moverPaso(1)">PASO 1</div>
+    <div class="pasoBtn " onclick="moverPaso(2)">PASO 2</div>
+    <div class="pasoBtn " onclick="moverPaso(3)">PASO 3</div>
+</section>
+
+<section id="instrCont">
+    
+        <div class="pasoCont">
+            <div class="pasoTitCont">
+                <div class="pasoTit">Registro de Proyectos</div>
+            </div>
+        
+            <div class="pasoDesc">
+                Llenar la tabla mediante el <strong>formulario</strong> y el botón <strong>Agregar</strong>, Una vez terminado dar click en el boton <strong>CONTINUAR PASO 2</strong>
+            </div>
+        </div>
+    
+
+</section>
+
+
+<section id="mainCont">
+    <div id="cajaInputAux">
+
+    </div>
+    <div class="tableWrapper" id="contForm">
+
+        
+        
+
+       <div id="cajaForm" >
+
+        <form name="formProyecto" class="formWrapper" >
+
+            <div class="resumenTitle">
+                Proyectos de Investigación:
+            </div>
+        
+            <div class="formProyectos form">
+        
+                <div class="formField">
+                    <div>
+                        <label for="nombreProy">Nombre de proyecto investigación:</label>
+                        <input type="text" id="nombreProy" name="nombreProy">
+                    </div>
+        
+                    <p>Tipo de Financiamiento:</p>
+        
+                    <div class="opt">
+                        <div class="radioTop">
+                            <input type="radio" id="papiit" name="tipoProy" value="PAPIIT">
+                            <label for="papiit">PAPIIT</label><br>
+                        </div>
+                        <div class="radioTop">
+                            <input type="radio" id="papime" name="tipoProy" value="PAPIME">
+                            <label for="papime">PAPIME</label><br>
+                        </div>
+        
+                        <div class="radioBot otro">
+                            <input type="radio" id="finanOpt" name="tipoProy" value="Otro: ">
+                            <label for="finanOpt">Otro: </label><br>
+                            <input type="text" id="otroTipoProy" name="otroTipoProy">
+                        </div>
+                    </div>
+        
+                </div>
+        
+            </div>
+        
+            <div class="contButton">
+                <div class="boton" onclick="capturar(0)">Agregar</div>
+            </div>
+        
+        </form>
+       </div>
+    
+        
+    </div>
+    
+    <div class="tableWrapper" id="tableCont">
+    
+        
+            <div class="resumenTitle">
+                RESUMEN :
+            </div>
+    
+            <div class="contTabla-btn">
+    
+                <div class="overflowTable" id="cajaTabla">
+                    <table id="tablaResumen" class="tabla">
+                        <tr class="anclado">
+                            <th>Nombre de Proyecto</th>
+                            <th>Tipo de financiamiento</th>
+                            <th>Otro</th>
+                        </tr>
+                        
+                    </table>
+                </div>
+
+                <div id="contBotonPaso" class="contButtonTabla">
+                    <div class="navButton" onclick="moverPaso(2)">
+                        <div class="boton">CONTINUAR PASO 2</div>
+                    </div>
+                </div>
+
+    
+            </div>
+            
+
+            
+        
+    
+    </div>
+</section>
+
 
 
 <section>
 
 
-<div id="supCont">
-    <div class="pasoCont">
-        <div class="pasoTitCont">
-            <div class="pasoNum">PASO 1 :</div>
-            <div class="pasoTit">Registro de Proyectos</div>
-        </div>
-    
-        <div class="pasoDesc">
-            Llenar la tabla mediante el <strong>formulario</strong> y el botón <strong>Agregar</strong>, Una vez terminado dar click en el boton <strong>CONTINUAR PASO 2</strong>
-        </div>
-    </div>
-</div>
-
-
-<div class="tableWrapper" id="contForm">
-    <div class="subTitulo subForm">
-        <h2>Proyectos de Investigación:</h2>
-        <div class="line"></div>
-    </div>
-    
-    <form name="formProyecto" class="formWrapper" >
-    
-        <div class="formProyectos form">
-    
-            <div class="formField">
-                <div>
-                    <label for="nombreProy">Nombre de proyecto investigación:</label>
-                    <input type="text" id="nombreProy" name="nombreProy">
-                </div>
-    
-                <p>Tipo de Financiamiento:</p>
-    
-                <div class="opt">
-                    <div class="radioTop">
-                        <input type="radio" id="papiit" name="tipoProy" value="PAPIIT">
-                        <label for="papiit">PAPIIT</label><br>
-                    </div>
-                    <div class="radioTop">
-                        <input type="radio" id="papime" name="tipoProy" value="PAPIME">
-                        <label for="papime">PAPIME</label><br>
-                    </div>
-    
-                    <div class="radioBot otro">
-                        <input type="radio" id="finanOpt" name="tipoProy" value="Otro: ">
-                        <label for="finanOpt">Otro: </label><br>
-                        <input type="text" id="otroTipoProy" name="otroTipoProy">
-                    </div>
-                </div>
-    
-            </div>
-    
-        </div>
-    
-        <div class="contButton">
-            <div class="boton" onclick="capturar(0)">Agregar</div>
-        </div>
-    
-    </form>
-
-    
-</div>
-
-<div class="tableWrapper" id="tableCont">
-
-    <div>
-        <div class="resumenTitle">
-            RESUMEN :
-        </div>
-
-        
-        <table id="tablaResumen">
-            <tr>
-                <th>Nombre de Proyecto</th>
-                <th>Tipo de financiamiento</th>
-                <th>Otro</th>
-            </tr>
-            
-        </table>
-    </div>
-
-</div>
 
 
 
 
 
-<div id="contBotonPaso" >
+
+
+
+
+<!-- <div id="contBotonPaso" >
     <div class="navButton" onclick="moverPaso(2)" >
         <div class="boton">CONTINUAR PASO 2</div>
     </div>
-</div>
+</div> -->
 
 </section>
 
