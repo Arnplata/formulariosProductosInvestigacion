@@ -1,21 +1,95 @@
-
-body{
+body {
   margin: 0;
+}
+
+section#menuCont {
+  width: 100%;
+  height: 3.5em;
+  background-color: aquamarine;
+  display: flex;
+}
+
+section#mainCont {
+  display: flex;
+  padding: 0 2em;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+section#instrCont {
+  padding: 2em 3em;
+}
+
+#contForm {
+}
+
+.overflowTable {
+  overflow: auto;
+  max-height: 15em;
+}
+
+.contTabla-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 45rem;
 }
 
 
 
+.pasoBtn {
+  width: 30%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background-color: #e0e0e0;
+
+  color: #255981;
+
+  font-weight: 500;
+
+  font-size: 23px;
+
+  font-family: "Poppins";
+
+  cursor: pointer;
+
+  transition: background-color 0.5s,width 0.5s,color 0.5s;
+}
+
+.pasoBtn.active {
+  width: 40%;
+  background-color: #255981;
+  color: white;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.pasoBtn:hover {
+  background-color: #cecece;
+}
+
+.pasoBtn.active:hover {
+  background-color: #255981;
+  cursor: auto;
+}
+
 h2 {
   font-weight: 400;
   text-transform: uppercase;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   display: inline-block;
   font-size: 30px;
   color: var(--oscuro);
   margin-left: var(--col-1);
 }
 
-.logo{
+.logo {
   background-image: url("assets/aragon_logo.png");
   background-size: cover;
   width: 8rem;
@@ -24,12 +98,19 @@ h2 {
   filter: grayscale(1);
 }
 
-
-.subTitulo h2{
-  margin: 0;font-family: 'Poppins';font-size: 24px;font-weight: 500;z-index: 10;background-color: white;margin-left: 1.5em;width: 10.5em;text-align: center;
+.subTitulo h2 {
+  margin: 0;
+  font-family: "Poppins";
+  font-size: 24px;
+  font-weight: 500;
+  z-index: 10;
+  background-color: white;
+  margin-left: 1.5em;
+  width: 10.5em;
+  text-align: center;
 }
 
-.subTitulo{
+.subTitulo {
   margin-top: 0.3em;
   margin-left: 1.33em;
   width: 32rem;
@@ -58,21 +139,20 @@ input[type="submit" i] {
   border-radius: 5px;
   background-color: var(--oscuro);
   color: white;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 600;
   cursor: pointer;
 }
 
-.subTitulo.subForm{
+.subTitulo.subForm {
+  width: 100%;
 
-width: 100%;
-
-margin-left: 0;
+  margin-left: 0;
 }
 
-.subTitulo.subTitulo.subForm h2{
+.subTitulo.subTitulo.subForm h2 {
   margin: 0;
-  font-family: 'Josefin Sans';
+  font-family: "Josefin Sans";
   font-size: 32px;
   font-weight: 500;
   z-index: 10;
@@ -83,44 +163,41 @@ margin-left: 0;
   text-align: center;
 }
 
-.subTitulo.subForm .line{
+.subTitulo.subForm .line {
+  width: 100%;
 
-width: 100%;
+  height: 3px;
 
-height: 3px;
+  background-color: var(--oscuro);
 
-background-color: var(--oscuro);
+  z-index: 1;
 
-z-index: 1;
-
-position: absolute;
-
+  position: absolute;
 }
 
-.subTitulo .line{
+.subTitulo .line {
+  width: 31rem;
 
-width: 31rem;
+  height: 3px;
 
-height: 3px;
+  background-color: var(--oscuro);
 
-background-color: var(--oscuro);
+  z-index: 1;
 
-z-index: 1;
-
-position: absolute;
+  position: absolute;
 }
 
-h1{
- font-weight: 600;
- text-transform: uppercase;
- font-family: 'Josefin Sans', sans-serif;
- display: inline-block;
- font-size: 37px;
- color: var(--oscuro);
- margin-left: 2.33%;
- width: 32rem;
- margin-bottom: 0;
- margin-top: 1.2rem;
+h1 {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  display: inline-block;
+  font-size: 37px;
+  color: var(--oscuro);
+  margin-left: 2.33%;
+  width: 32rem;
+  margin-bottom: 0;
+  margin-top: 1.2rem;
 }
 
 p {
@@ -128,7 +205,7 @@ p {
   line-height: 10px;
   text-align: justify;
   color: var(--texto-principal);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 label {
@@ -136,7 +213,7 @@ label {
   line-height: 10px;
   text-align: justify;
   color: var(--texto-principal);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /* label {
@@ -148,99 +225,100 @@ input,label {
   margin: .4rem 0;
 } */
 
-.formWrapper{
-  
-display: flex;
-  
-width: 100%;
-  
-justify-content: space-around;
-  
-align-items: center;
-  
-margin: 3em 0;
-  
-flex-direction: column;
+.formWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
 
-.hder{
-  
-display: flex;
-  
-justify-content: space-between;
-  
-align-items: center;
+.hder {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
 }
 
-
-.form {width: 50vw;border: 3px solid var(--texto-oscuro);padding: 1em 1em 0em 1em;border-radius: 11px;}
-
-p{
-
-font-weight: 600;
-
-font-size: 17px;
+.form {
+  border: 3px solid var(--texto-oscuro);
+  padding: 1em 1em 0em 1em;
+  border-radius: 11px;
+  width: fit-content;
+  min-width: fit-content;
 }
 
-.formField{
+p {
+  font-weight: 600;
+
+  font-size: 17px;
+}
+
+.formField {
   display: flex;
   flex-direction: column;
 }
 
-.formField div{margin-bottom: 1em;}
+.formField div {
+  margin-bottom: 1em;
+}
 
-.formField p{margin-top: 0em;}
+.formField p {
+  margin-top: 0em;
+}
 
 /* .formField select{margin-bottom: 1em;} */
 
-.formField label{font-weight: 600;font-size: 17px;margin-right: 0.5em;color: var(--texto-principal);}
+.formField label {
+  font-weight: 600;
+  font-size: 17px;
+  margin-right: 0.5em;
+  color: var(--texto-principal);
+}
 
-.formPublicaciones .formato-tipo{}
+.formPublicaciones .formato-tipo {
+}
 
-.radioBot{
+.radioBot {
   margin-bottom: 0em !important   ;
 }
 
-.radioTop{
-  margin-bottom: .5em !important;
+.radioTop {
+  margin-bottom: 0.5em !important;
 }
 
-.inptLarge{
-  
-display: flex;
-  
-flex-direction: column;
-  
-height: 3em;
-  
-justify-content: space-between;
+.inptLarge {
+  display: flex;
+
+  flex-direction: column;
+
+  height: 3em;
+
+  justify-content: space-between;
 }
 
-.referencias{
+.referencias {
+  display: flex;
 
-display: flex;
+  justify-content: space-around;
 
-justify-content: space-around;
-
-align-items: center;
+  align-items: center;
 }
 
-.referencias input{
+.referencias input {
   margin: 0;
-  margin-right: .5em;
+  margin-right: 0.5em;
 }
 
-
-.opt label{
+.opt label {
   font-weight: 100;
-
 }
 
 .formPublicaciones .referencias .referencias-1 {
-
 }
 
-.formPublicaciones .referencias .referencias-2{
+.formPublicaciones .referencias .referencias-2 {
 }
 
 .tooltip-right {
@@ -260,29 +338,36 @@ align-items: center;
   z-index: 1;
   top: -5px;
   left: 110%;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 14px;
 }
 
-.otro{
-    
-display: flex;
-    
-align-items: center;
+.otro {
+  display: flex;
+
+  align-items: center;
 }
 
-.contButton{
-    
-width: 50vw;
-    
-display: flex;
-    
-justify-content: flex-end;
-    
-margin-top: 2em;
+.anclado {
+  position: sticky;
+  top: 0;
+  background-color: #255981;
+  color: white;
 }
 
-.navButton{
+.contButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.contButtonTabla {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.navButton {
   display: flex;
 }
 
@@ -300,66 +385,57 @@ margin-top: 2em;
   visibility: visible;
 }
 
-.pasoCont{
-  
-display: flex;
-  
-margin-left: 3vw;
-  
-margin-bottom: 3em;
-  
-width: 85vw;
-  
-margin-top: 3em;
+.pasoCont {
+  display: flex;
+
+  align-items: center;
 }
 
-.pasoTitCont{
+.pasoTitCont {
+  font-family: "Poppins";
 
-font-family: 'Poppins';
+  border-left: 3px solid var(--oscuro);
 
-border-left: 3px solid var(--oscuro);
-
-padding-left: 0.5em;
+  padding-left: 0.5em;
 }
 
-.pasoTitCont .pasoNum{font-weight: 600;font-size: 25px;}
-
-.pasoTitCont .pasoTit{
-    
-font-weight: 500;
+.pasoTitCont .pasoNum {
+  font-weight: 600;
+  font-size: 25px;
 }
 
-.pasoDesc{
-  
-font-family: 'Poppins';
-  
-width: 76em;
-  
-margin-left: 3em;
+.pasoTitCont .pasoTit {
+  font-weight: 500;
+
+  font-size: 16px;
 }
 
-.tableWrapper{
-  
-width: 100%;
-  
-display: flex;
-  
-flex-direction: column;
-  
-align-items: center;
-  
-margin-bottom: 2em;
+.pasoDesc {
+  font-family: "Poppins";
+
+  width: 76em;
 }
 
-#contBotonPaso{width: 100%;display: flex;align-items: center;margin-bottom: 4em;margin-top: 4em;justify-content: space-evenly;}
+.tableWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+#contBotonPaso {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
-  width: calc(50vw + 2em);
+  width: 100%;
 }
 
-td, th {
+td,
+th {
   border: 1px solid var(--oscuro);
   text-align: left;
   padding: 8px;
@@ -369,12 +445,12 @@ tr:nth-child(even) {
   background-color: #dddddd;
 }
 
-.boton{
+.boton {
   border: 0;
   border-radius: 5px;
   background-color: var(--oscuro);
   color: white;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 600;
   cursor: pointer;
   padding: 0.2em 25px;
@@ -385,25 +461,51 @@ tbody:nth-child(even) {
   background-color: #dddddd;
 }
 
-.resumenTitle{
-  
-font-family: 'Poppins';
-  
-font-size: 22px;
-  
-margin-bottom: 0.5em;
-  
-font-weight: 500;
+.resumenTitle {
+  font-family: "Poppins";
+  font-size: 22px;
+  font-weight: 500;
+  /* width: 25em; */
+  margin-bottom: 1em;
 }
 
-.selectTipoProy{
+.selectTipoProy {margin-bottom: 2em;}
+
+#contForm table {
+  margin-top: 1em;
+
+  margin-bottom: 5em;
+
+  width: 65vw;
 }
 
-#contForm table{
+#productos {
+  /* width: 100%; */
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+#cajaForm{
+  height: 100%;
+}
+
+
+.titResumen{
+  font-family: "Poppins";
+  font-size: 22px;
+  font-weight: 500;
+  margin: 1em 0;
+}
+
+#cajaTabla{
   
-margin-top: 1em;
+width: 100%;
+}
+
+.referencias label{
   
-margin-bottom: 5em;
-  
-width: 65vw;
+}
+
+#tableCont{
+  height: 25em;
 }
