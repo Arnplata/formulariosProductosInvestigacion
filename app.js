@@ -1,11 +1,13 @@
 
-function Proyecto(nombre,financiamiento1,financiamiento2) {
+function Proyecto(nombre,profesor,profesorAux,financiamiento1) {
     this.nombre=nombre;
+    this.profesor=profesor;
+    this.profesorAux=profesorAux;
     this.financiamiento1=financiamiento1;
-    this.financiamiento2=financiamiento2;
+    
 }
 
-function Publicacion(nombreProyecto,nombrePublicacion,tipoPublicacion,tipoFormato,isbn,issn,doi,uri) {
+function Publicacion(nombrePublicacion,nombreProyecto,tipoPublicacion,tipoFormato,isbn,issn,doi,uri) {
     this.nombrePublicacion=nombrePublicacion;
     this.nombreProyecto=nombreProyecto;
     this.tipoPublicacion=tipoPublicacion;
@@ -16,7 +18,7 @@ function Publicacion(nombreProyecto,nombrePublicacion,tipoPublicacion,tipoFormat
     this.uri=uri;
 }
 
-function Tesis(nombreProyecto,nombreTesis,gradoTesis,nombreAlumno,fechaTermino) {
+function Tesis(nombreTesis,nombreProyecto,gradoTesis,nombreAlumno,fechaTermino) {
     this.nombreTesis=nombreTesis;
     this.nombreProyecto=nombreProyecto;
     this.nombreAlumno=nombreAlumno;
@@ -24,7 +26,7 @@ function Tesis(nombreProyecto,nombreTesis,gradoTesis,nombreAlumno,fechaTermino) 
     this.gradoTesis=gradoTesis;
 }
 
-function ArticuloCientifico(nombreProyecto,nombreArticulo,nombreAlumno,gradoAlumno,fechaPublicacion,isbn,issn,doi,uri) {
+function ArticuloCientifico(nombreArticulo,nombreProyecto,nombreAlumno,gradoAlumno,fechaPublicacion,isbn,issn,doi,uri) {
     this.nombreProyecto=nombreProyecto;
     this.nombreArticulo=nombreArticulo;
     this.nombreAlumno=nombreAlumno;
@@ -36,14 +38,14 @@ function ArticuloCientifico(nombreProyecto,nombreArticulo,nombreAlumno,gradoAlum
     this.uri=uri;
 }
 
-function DesarrolloTecnologico(nombreProyecto,nombreDelDesarrollo,nombreResponsable,fechaPublicacion) {
+function DesarrolloTecnologico(nombreDelDesarrollo,nombreProyecto,nombreResponsable,fechaPublicacion) {
     this.nombreDelDesarrollo=nombreDelDesarrollo;
     this.nombreProyecto=nombreProyecto;
     this.nombreResponsable=nombreResponsable;
     this.fechaPublicacion=fechaPublicacion;
 }
 
-function PonenciaEnCongreso(nombreProyecto,nombrePonencia,nombreCongreso,lugarPonencia,fechaPublicacion) {
+function PonenciaEnCongreso(nombrePonencia,nombreProyecto,nombreCongreso,lugarPonencia,fechaPublicacion) {
     this.nombreProyecto=nombreProyecto;
     this.nombrePonencia=nombrePonencia;
     this.nombreCongreso=nombreCongreso;
@@ -52,20 +54,20 @@ function PonenciaEnCongreso(nombreProyecto,nombrePonencia,nombreCongreso,lugarPo
   
 }
 
-function PatenteDerechoDeAutor(nombreProyecto,nombreAutor,productoCientifico,fechaPublicacion) {
+function PatenteDerechoDeAutor(nombreAutor,nombreProyecto,productoCientifico,fechaPublicacion) {
     this.nombreAutor=nombreAutor;
     this.nombreProyecto=nombreProyecto;
     this.productoCientifico=productoCientifico;
     this.fechaPublicacion=fechaPublicacion;
 }
 
-function MapaBaseDeDatos(nombreProyecto,nombreMapaBase,fechaCreacion) {
+function MapaBaseDeDatos(nombreMapaBase,nombreProyecto,fechaCreacion) {
     this.nombreMapaBase=nombreMapaBase;
     this.nombreProyecto=nombreProyecto;
     this.fechaCreacion=fechaCreacion;
 }
 
-function PublicacionElectronica(nombreProyecto,nombreArticulo,fechaPublicacion,isbn,issn,doi,uri) {
+function PublicacionElectronica(nombreArticulo,nombreProyecto,fechaPublicacion,isbn,issn,doi,uri) {
     this.nombreArticulo=nombreArticulo;
     this.nombreProyecto=nombreProyecto;
     this.isbn=isbn;
@@ -75,7 +77,7 @@ function PublicacionElectronica(nombreProyecto,nombreArticulo,fechaPublicacion,i
     this.fechaPublicacion=fechaPublicacion;
 }
 
-function ActividadAcademicaLocalInternacional(nombreProyecto,nombreActividad,tipoActividad,nacionalInternacional,nombreInstitucion,lugarEvento,fechaEvento) {
+function ActividadAcademicaLocalInternacional(nombreActividad,nombreProyecto,tipoActividad,nacionalInternacional,nombreInstitucion,lugarEvento,fechaEvento) {
     this.nombreActividad=nombreActividad;
     this.nombreProyecto=nombreProyecto;
     this.tipoActividad=tipoActividad;
@@ -85,7 +87,7 @@ function ActividadAcademicaLocalInternacional(nombreProyecto,nombreActividad,tip
     this.fechaEvento=fechaEvento;
 }
 
-function AlumnoParticipanteProyInv(nombreProyecto,nombreAlumno,gradoAlumno,tipoProyecto,fecha) {
+function AlumnoParticipanteProyInv(nombreAlumno,nombreProyecto,gradoAlumno,tipoProyecto,fecha) {
     this.nombreAlumno=nombreAlumno;
     this.nombreProyecto=nombreProyecto;
     this.gradoAlumno=gradoAlumno;
@@ -93,7 +95,7 @@ function AlumnoParticipanteProyInv(nombreProyecto,nombreAlumno,gradoAlumno,tipoP
     this.fecha=fecha;
 }
 
-function EstanciaAcademica(nombreProyecto,nombreInstitucion,nacionalInternacional,lugarEstancia,fecha) {
+function EstanciaAcademica(nombreInstitucion,nombreProyecto,nacionalInternacional,lugarEstancia,fecha) {
     this.nombreInstitucion=nombreInstitucion;
     this.nombreProyecto=nombreProyecto;
     this.nacionalInternacional=nacionalInternacional;
@@ -101,7 +103,7 @@ function EstanciaAcademica(nombreProyecto,nombreInstitucion,nacionalInternaciona
     this.lugarEstancia=lugarEstancia;
 }
 
-function ActividadesDivulgacionCientifica(nombreProyecto,nombreActividad,tipoActividad,fechaActividad) {
+function ActividadesDivulgacionCientifica(nombreActividad,nombreProyecto,tipoActividad,fechaActividad) {
     this.nombreActividad=nombreActividad;
     this.nombreProyecto=nombreProyecto;
     this.tipoActividad=tipoActividad;
@@ -114,13 +116,14 @@ var nombresProductos = ["PROYECTOS DE INVESTIGACIÓN","PUBLICACIONES","TESIS","A
 
 var listaProyectos=[{
     "nombre": "Nombre de Proyecto",
-    "financiamiento1": "Tipo de financiamiento",
-    "financiamiento2": "Otro"
+    "profesor": "Profesor Titular",
+    "profesorAux": "Profesor Auxiliar",
+    "financiamiento1": "Tipo de Financiamiento"
 }];
 
 var listaPublicacion=[{
-    "nombreProyecto": "Nombre del Proyecto",
     "nombrePublicacion": "Nombre de la Publicación",
+    "nombreProyecto": "Nombre del Proyecto",
     "tipoPublicacion": "Tipo de Publicacion",
     "tipoFormato": "Formato",
     "isbn": "ISBN",
@@ -132,22 +135,20 @@ var listaPublicacion=[{
 var listaTesis=[{
     "nombreTesis": "Nombre de Tesis",
     "nombreProyecto": "Nombre de Proyecto",
+    "gradoTesis": "Grado de la Tesis",
     "nombreAlumno": "Nombre del Alumno",
-    "fechaTermino": "Fecha de término",
-    "gradoTesis": "Grado de la Tesis"
-    
+    "fechaTermino": "Fecha de término"
 },{
     "nombreTesis": "Tesis de prueba",
     "nombreProyecto": "proyecto de prueba",
+    "gradoTesis": "Grado de prueba",
     "nombreAlumno": "alumno de prueba",
-    "fechaTermino": "fecha de prueba",
-    "gradoTesis": "Grado de prueba"
-    
+    "fechaTermino": "fecha de prueba"
 }];
 
 var listaArticuloCientifico=[{
-    "nombreProyecto": "Nombre de Proyecto",
     "nombreArticulo": "Nombre del Artículo",
+    "nombreProyecto": "Nombre de Proyecto",
     "nombreAlumno": "Nombre del Alumno",
     "gradoAlumno": "Grado del Alumno",
     "fechaPublicacion": "Fecha de Publicación",
@@ -165,11 +166,11 @@ var listaDesarrolloTecnologico=[{
 }];
 
 var listaPonenciaEnCongreso=[{
-    "nombreProyecto": "Nombre de Proyecto",
     "nombrePonencia": "Nombre de Ponencia",
+    "nombreProyecto": "Nombre de Proyecto",
     "nombreCongreso": "Nombre de Congreso",
-    "fechaPublicacion": "Fecha",
-    "lugarPonencia": "Lugar de Ponencia"
+    "lugarPonencia": "Lugar de Ponencia",
+    "fechaPublicacion": "Fecha"
 }];
 
 var listaPatenteDerechoDeAutor=[{
@@ -188,11 +189,12 @@ var listaMapaBaseDeDatos=[{
 var listaPublicacionElectronica=[{
     "nombreArticulo": "Nombre del Artículo",
     "nombreProyecto": "Nombre de Proyecto",
+    "fechaPublicacion": "Fecha",
     "isbn": "ISBN",
     "issn": "ISSN",
     "doi": "DOI",
     "uri": "URI",
-    "fechaPublicacion": "Fecha"
+    
 }];
 
 var listaActividadAcademicaLocalInternacional=[{
@@ -217,8 +219,8 @@ var listaEstanciaAcademica=[{
     "nombreInstitucion": "Nombre de la Institución",
     "nombreProyecto": "Nombre de Proyecto",
     "nacionalInternacional": "Nacional / Internacional",
-    "fecha": "Fecha",
-    "lugarEstancia": "Lugar de Estancia"
+    "lugarEstancia": "Lugar de Estancia",
+    "fecha": "Fecha"
 }];
 
 var listaActividadesDivulgacionCientifica=[{
@@ -231,8 +233,15 @@ var listaActividadesDivulgacionCientifica=[{
 var listaNombres=[];
 
 function imprimeFormulario(i) {
-    let cajaFormulario = document.getElementById("cajaForm");
-    cajaFormulario.innerHTML=formularios[i];
+    if (i>0) {
+        let cajaFormulario = document.getElementById("cajaForm");
+        cajaFormulario.innerHTML=formularios[i];
+        agregarProyectos()    
+    } else {
+        let cajaFormulario = document.getElementById("cajaForm");
+        cajaFormulario.innerHTML=formularios[i];
+    }
+    
 }
 
 function getFormulariosIndx() {
@@ -251,7 +260,7 @@ function getFormulariosIndx() {
         indice ==  9  ? listaActividadAcademicaLocalInternacional:
         indice ==  10 ? listaAlumnoParticipanteProyInv:
         indice ==  11 ? listaEstanciaAcademica :
-        indice ==  12 ? listaEstanciaAcademica : "");
+        indice ==  12 ? listaActividadesDivulgacionCientifica : "");
     tablaABorrar.remove();
     imprimeFormulario(indice)
     genera_tabla(lista)
@@ -286,7 +295,7 @@ function imprime_Resumen(){
         indice ==  9  ? listaActividadAcademicaLocalInternacional:
         indice ==  10 ? listaAlumnoParticipanteProyInv:
         indice ==  11 ? listaEstanciaAcademica :
-        indice ==  12 ? listaEstanciaAcademica : "");
+        indice ==  12 ? listaActividadesDivulgacionCientifica : "");
       
       let cajaTitulo = document.createElement("div") 
       let titulo = document.createTextNode(nombresProductos[indice] + ":");
@@ -369,7 +378,7 @@ function genera_tablaResumen(lista) {
   }
 
 function genera_tabla(lista) {
-
+    console.log(lista);
     // Obtener la referencia del elemento body
     //Contenedor donde imprimira la tabla
     var cajaTabla = document.getElementById("cajaTabla");
@@ -402,11 +411,14 @@ function genera_tabla(lista) {
             var textoCelda = document.createTextNode(objetoProducto[key]);
 
             
-
-            // haz que el nodo de texto sea el contenido de <td>, ubica el elemento <td> al final
             
+            // haz que el nodo de texto sea el contenido de <td>, ubica el elemento <td> al final
+            var cajaBtn = document.createElement("td")
+            var boton = document.createElement("button")
+            boton.setAttribute("id", `${lista}-${i}`)
             celda.appendChild(textoCelda);
             hilera.appendChild(celda);
+            
 
           }
        
@@ -415,6 +427,14 @@ function genera_tabla(lista) {
   
       // agrega la hilera al final de la tabla (al final del elemento tblbody)
       tblBody.appendChild(hilera);
+      if (i > 0) {
+          hilera.appendChild(cajaBtn)
+          cajaBtn.appendChild(boton)
+      } else {
+          var actionHder = document.createElement("th");
+          actionHder.appendChild(document.createTextNode("Acciones"))
+          hilera.appendChild(actionHder)
+      }
     }
   
     // posiciona el <tbody> debajo del elemento <table>
@@ -436,8 +456,10 @@ switch (t) {
 
         nuevoProyecto = new Proyecto(
             document.getElementById("nombreProy").value,
-            document.formProyecto.tipoProy.value,
-            document.getElementById("otroTipoProy").value
+            document.getElementById("nombreProfesor").value,
+            document.getElementById("nombreProfesorAux").value,
+            document.formProyecto.tipoProy.value + document.getElementById("otroTipoProy").value,
+            
         );
         console.log(nuevoProyecto);
 
@@ -446,18 +468,21 @@ switch (t) {
         listaProyectos.push(nuevoProyecto);
             listaNombres.push(nuevoProyecto.nombre);
             tabla.innerHTML += ` <tr>
+            
                 <td>${nuevoProyecto.nombre}</td>
+                <td>${nuevoProyecto.profesor}</td>
+                <td>${nuevoProyecto.profesorAux}</td>
                 <td>${nuevoProyecto.financiamiento1}</td>
-                <td>${nuevoProyecto.financiamiento2}</td>
+                
             </tr>`;
             console.log(listaNombres);
     break;
 
     case 1:
         nuevoPublicacion = new Publicacion(
+            document.getElementById("nombrePub").value,
             document.getElementById("proyectos").value,
             document.formPub.tipoPub.value,
-            document.getElementById("nombrePub").value,
             document.formPub.formatoPub.value,
             document.getElementById("isbn").value,
             document.getElementById("issn").value,
@@ -468,9 +493,9 @@ switch (t) {
         
         listaPublicacion.push(nuevoPublicacion);
             tabla.innerHTML += ` <tr>
+            <td>${nuevoPublicacion.nombrePublicacion}</td>
             <td>${nuevoPublicacion.nombreProyecto}</td>
             <td>${nuevoPublicacion.tipoPublicacion}</td>
-            <td>${nuevoPublicacion.nombrePublicacion}</td>
             <td>${nuevoPublicacion.tipoFormato}</td>
             <td>${nuevoPublicacion.isbn}</td>
             <td>${nuevoPublicacion.issn}</td>
@@ -484,11 +509,13 @@ switch (t) {
     case 2:
 
         nuevoTesis = new Tesis(
-            document.getElementById("proyectos").value,
+            
             document.getElementById("nombreTesis").value,
+            document.getElementById("proyectos").value,
             document.getElementById("gradTesis").value,
             document.getElementById("nombreAlumno").value,
-            document.getElementById("fechaPub").value
+            document.getElementById("fechaPub").value,
+            
         );
         console.log(nuevoTesis);
 
@@ -496,8 +523,8 @@ switch (t) {
         
         listaTesis.push(nuevoTesis);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoTesis.nombreProyecto}</td>
                 <td>${nuevoTesis.nombreTesis}</td>
+                <td>${nuevoTesis.nombreProyecto}</td>
                 <td>${nuevoTesis.gradoTesis}</td>
                 <td>${nuevoTesis.nombreAlumno}</td>
                 <td>${nuevoTesis.fechaTermino}</td>
@@ -508,8 +535,8 @@ switch (t) {
     case 3:
 
         nuevoArtCient = new ArticuloCientifico(
-            document.getElementById("proyectos").value,
             document.getElementById("nombreArtCient").value,
+            document.getElementById("proyectos").value,
             document.getElementById("nombreAlumno").value,
             document.getElementById("gradAlmn").value,
             document.getElementById("fechaPub").value,
@@ -521,8 +548,8 @@ switch (t) {
         
         listaArticuloCientifico.push(nuevoArtCient);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoArtCient.nombreProyecto}</td>
-                <td>${nuevoArtCient.nombreArticulo}</td>
+                <td>${nuevoArtCient.nombreArticulo}</td>    
+                <td>${nuevoArtCient.nombreProyecto}</td>    
                 <td>${nuevoArtCient.nombreAlumno}</td>
                 <td>${nuevoArtCient.gradoAlumno}</td>
                 <td>${nuevoArtCient.fechaPublicacion}</td>
@@ -536,8 +563,8 @@ switch (t) {
 
     case 4:
         nuevoDesarrolloTec = new DesarrolloTecnologico(
+            document.getElementById("nombreDesTec").value,
             document.getElementById("proyectos").value,
-            document.getElementById("nombrePonencia").value,
             document.getElementById("nombreResponsable").value,
             document.getElementById("fechaPub").value
         );
@@ -545,8 +572,8 @@ switch (t) {
         listaDesarrolloTecnologico.push(nuevoDesarrolloTec);
             tabla.innerHTML += `
             <tr>
-                <td>${nuevoDesarrolloTec.nombreProyecto}</td>
                 <td>${nuevoDesarrolloTec.nombreDelDesarrollo}</td>
+                <td>${nuevoDesarrolloTec.nombreProyecto}</td>
                 <td>${nuevoDesarrolloTec.nombreResponsable}</td>
                 <td>${nuevoDesarrolloTec.fechaPublicacion}</td>
                 
@@ -557,8 +584,8 @@ switch (t) {
     case 5:
 
         nuevoPonenciaCongreso = new PonenciaEnCongreso(
-            document.getElementById("proyectos").value,
             document.getElementById("nombrePonencia").value,
+            document.getElementById("proyectos").value,
             document.getElementById("nombreCongreso").value,
             document.getElementById("lugarPonencia").value,
             document.getElementById("fechaPub").value
@@ -567,8 +594,8 @@ switch (t) {
         
         listaDesarrolloTecnologico.push(nuevoPonenciaCongreso);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoPonenciaCongreso.nombreProyecto}</td>
                 <td>${nuevoPonenciaCongreso.nombrePonencia}</td>
+                <td>${nuevoPonenciaCongreso.nombreProyecto}</td>
                 <td>${nuevoPonenciaCongreso.nombreCongreso}</td>
                 <td>${nuevoPonenciaCongreso.lugarPonencia}</td>
                 <td>${nuevoPonenciaCongreso.fechaPublicacion}</td>
@@ -579,8 +606,8 @@ switch (t) {
 
     case 6:
         nuevoPatenteDerecho = new PatenteDerechoDeAutor(
-            document.getElementById("proyectos").value,
             document.getElementById("nombreAutor").value,
+            document.getElementById("proyectos").value,
             document.getElementById("productoQuehacer").value,
             document.getElementById("fechaPub").value,
         );
@@ -588,8 +615,8 @@ switch (t) {
         
         listaPatenteDerechoDeAutor.push(nuevoPatenteDerecho);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoPatenteDerecho.nombreProyecto}</td>
                 <td>${nuevoPatenteDerecho.nombreAutor}</td>
+                <td>${nuevoPatenteDerecho.nombreProyecto}</td>
                 <td>${nuevoPatenteDerecho.productoCientifico}</td>
                 <td>${nuevoPatenteDerecho.fechaPublicacion}</td>
                 </tr>`;
@@ -598,24 +625,24 @@ switch (t) {
 
     case 7:
         nuevoMapaBase = new MapaBaseDeDatos(
-            document.getElementById("proyectos").value,
             document.getElementById("nombreMapBase").value,
+            document.getElementById("proyectos").value,
             document.getElementById("fechaMapBase").value
         );
         console.log(nuevoMapaBase);
         
         listaMapaBaseDeDatos.push(nuevoMapaBase);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoMapaBase.nombreProyecto}</td>
                 <td>${nuevoMapaBase.nombreMapaBase}</td>
+                <td>${nuevoMapaBase.nombreProyecto}</td>
                 <td>${nuevoMapaBase.fechaCreacion}</td>
                 </tr>`;
 
     break;
     case 8:
         nuevoPublicacionElec = new PublicacionElectronica(
-            document.getElementById("proyectos").value,
             document.getElementById("nombreArtElec").value,
+            document.getElementById("proyectos").value,
             document.getElementById("fechaArtElec").value,
             document.getElementById("isbn").value,
             document.getElementById("issn").value,
@@ -626,8 +653,8 @@ switch (t) {
         
         listaPublicacionElectronica.push(nuevoPublicacionElec);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoPublicacionElec.nombreProyecto}</td>
                 <td>${nuevoPublicacionElec.nombreArticulo}</td>
+                <td>${nuevoPublicacionElec.nombreProyecto}</td>
                 <td>${nuevoPublicacionElec.fechaPublicacion}</td>
                 <td>${nuevoPublicacionElec.isbn}</td>
                 <td>${nuevoPublicacionElec.issn}</td>
@@ -638,8 +665,8 @@ switch (t) {
     break;
     case 9:
         nuevoActividadAcademica = new ActividadAcademicaLocalInternacional(
-            document.getElementById("proyectos").value,
             document.getElementById("nombreAct").value,
+            document.getElementById("proyectos").value,
             document.getElementById("tipoActividad").value,
             document.formActAcadInter.nacionalInternacional.value,
             document.getElementById("nombreInst").value,
@@ -650,8 +677,8 @@ switch (t) {
         
         listaActividadAcademicaLocalInternacional.push(nuevoActividadAcademica);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoActividadAcademica.nombreProyecto}</td>
                 <td>${nuevoActividadAcademica.nombreActividad}</td>
+                <td>${nuevoActividadAcademica.nombreProyecto}</td>
                 <td>${nuevoActividadAcademica.tipoActividad}</td>
                 <td>${nuevoActividadAcademica.nacionalInternacional}</td>
                 <td>${nuevoActividadAcademica.nombreInstitucion}</td>
@@ -662,8 +689,8 @@ switch (t) {
     break;
     case 10:
         nuevoAlumnoProyInv = new AlumnoParticipanteProyInv(
-            document.getElementById("proyectos").value,
             document.getElementById("nombreAlumnoProyInv").value,
+            document.getElementById("proyectos").value,
             document.getElementById("gradoAlmnProyInv").value,
             document.formAlmnProyInv.tipoProy.value,
             document.getElementById("fechaProy").value
@@ -672,8 +699,8 @@ switch (t) {
         
         listaAlumnoParticipanteProyInv.push(nuevoAlumnoProyInv);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoAlumnoProyInv.nombreProyecto}</td>
                 <td>${nuevoAlumnoProyInv.nombreAlumno}</td>
+                <td>${nuevoAlumnoProyInv.nombreProyecto}</td>
                 <td>${nuevoAlumnoProyInv.gradoAlumno}</td>
                 <td>${nuevoAlumnoProyInv.tipoProyecto}</td>
                 <td>${nuevoAlumnoProyInv.fecha}</td>
@@ -682,8 +709,8 @@ switch (t) {
     break;
     case 11:
         nuevoEstanciaAcademica = new EstanciaAcademica(
-            document.getElementById("proyectos").value,
             document.getElementById("nombreEstInst").value,
+            document.getElementById("proyectos").value,
             document.estAcad.nacionalInternacionalEstAcad.value,
             document.getElementById("lugarEstAcad").value,
             document.getElementById("fechaEstAcad").value
@@ -692,8 +719,8 @@ switch (t) {
         
         listaEstanciaAcademica.push(nuevoEstanciaAcademica);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoEstanciaAcademica.nombreProyecto}</td>
                 <td>${nuevoEstanciaAcademica.nombreInstitucion}</td>
+                <td>${nuevoEstanciaAcademica.nombreProyecto}</td>
                 <td>${nuevoEstanciaAcademica.nacionalInternacional}</td>
                 <td>${nuevoEstanciaAcademica.lugarEstancia}</td>
                 <td>${nuevoEstanciaAcademica.fecha}</td>
@@ -702,17 +729,17 @@ switch (t) {
     break;
     case 12:
         nuevoActividadDivCient = new ActividadesDivulgacionCientifica(
-            document.getElementById("proyectos").value,
             document.getElementById("nombreEvntDivCien").value,
+            document.getElementById("proyectos").value,
             document.getElementById("tipoActividadEvntDivCien").value,
             document.getElementById("fechaActDivCien").value
         );
-        console.log(nuevoEstanciaAcademica);
+        // console.log(nuevoEstanciaAcademica);
         
         listaActividadesDivulgacionCientifica.push(nuevoActividadDivCient);
             tabla.innerHTML += ` <tr>
-                <td>${nuevoActividadDivCient.nombreProyecto}</td>
                 <td>${nuevoActividadDivCient.nombreActividad}</td>
+                <td>${nuevoActividadDivCient.nombreProyecto}</td>
                 <td>${nuevoActividadDivCient.tipoActividad}</td>
                 <td>${nuevoActividadDivCient.fechaActividad}</td>
                 </tr>`;
@@ -724,248 +751,12 @@ switch (t) {
 
 }
 
-// function llenarTablas(t) {
 
-    
-//     switch (t) {
-//         case 0:
-//             for (let index = 0; index < listaProyectos.length; index++) {
-//                 document.getElementById("tablaResumen").innerHTML += ` <tr>
-//                     <td>${listaProyectos[index].nombre}</td>
-//                     <td>${listaProyectos[index].financiamiento1}</td>
-//                     <td>${listaProyectos[index].financiamiento2}</td>
-//                 </tr>`;
-//             }
-//             break;
-//         case 1:
-//             for (let index = 0; index < listaPublicacion.length; index++) {
-//                 document.getElementById("tablaResumen").innerHTML += ` <tr>
-//                     <td>${listaProyectos[index].nombre}</td>
-//                     <td>${listaProyectos[index].financiamiento1}</td>
-//                     <td>${listaProyectos[index].financiamiento2}</td>
-//                 </tr>`;
-//             }
-            
-
-//             break;
-            
-//         case 2:
-//             for (let index = 0; index < listaProyectos.length; index++) {
-//                 document.getElementById("tablaResumen").innerHTML += ` <tr>
-//                     <td>${listaProyectos[index].nombre}</td>
-//                     <td>${listaProyectos[index].financiamiento1}</td>
-//                     <td>${listaProyectos[index].financiamiento2}</td>
-//                 </tr>`;
-//             }
-            
-//                 break;
-            
-//         case 3:
-            
-            
-//                 break;
-            
-//         case 4:
-            
-            
-//                 break;
-            
-//         case 5:
-            
-//                 break;
-            
-//         case 6:
-
-            
-
-
-            
-//                 break;
-    
-//         case 7:
-
-            
-    
-//                 break;
-//         case 8:
-            
-    
-//                 break;
-//         case 9:
-            
-    
-//                 break;
-//         case 10:
-            
-    
-//                 break;
-//         case 11:
-            
-    
-//                 break;
-//         case 12:
-            
-    
-//                 break;
- 
-//     }
-// }
 
 function envio() {
     alert("Datos Enviados Correctamente!");
 }
 
-
-function dibujaRenglones(listaArray,listaString) {
-
-
-    for (let index = 0; index < listaArray.length; index++) {
-        tabla = document.querySelectorAll(`.${listaString}`)[0]
-        tabla.innerHTML += ` <tr></tr>`;
-        console.log(index)
-    }
-
-}
-
-function dibujaRenglonesPart() {
-    Object.keys(listaProyectos)
-    
-    for (let index = 1; index < listaProyectos.length; index++) {
-        document.getElementById("tablaResumen").innerHTML += ` <tr></tr>`;
-    }
-}
- 
-//AQUI NOS QUEDAMOS
-
-function llenaRenglones(listaArray,listaString) { 
-
-
-    campos = Object.keys(listaArray[0])
-
-    for (let index = 1; index < campos.length; index++) {
-        var renglon = document.querySelectorAll(`.${listaString} tr`)[index]
-        console.log(renglon)
-        var arrayIndx = 0;
-
-        renglon.innerHTML += ` 
-            <td>${listaArray[arrayIndx].nombre}</td>
-        `;
-
-        arrayIndx++;
-    }
-    
-}
-
-
-
-
-
-function llenaCasillasProyecto() {
-
-    var renglon = document.getElementsByClassName(`div.listaProyectos`)
-
-    var tabla  = document.getElementById("tablaResumen")
-
-    campos = Object.keys(lista[0])
-
-    for (let index = 0; index < campos.length; index++) {
-    
-        renglon[index].innerHTML += ` 
-            <td>${lista[index].nombre}</td>
-        `;
-    }
-    
-}
-
-function filtro(lista) {
-    arrayIndx = (
-        lista == 'listaProyecto' ? 0 :
-        lista == 'listaPublicacion' ? 1 :
-        lista == 'listaTesis' ? 2 :
-        lista == 'listaArticuloCientifico' ? 3 :
-        lista == 'listaDesarrolloTecnologico' ? 4 :
-        lista == 'listaPonenciaEnCongreso' ? 5 :
-        lista == 'listaPatenteDerechoDeAutor' ? 6 :
-        lista == 'listaMapaBaseDeDatos' ? 7 :
-        lista == 'listaPublicacionElectronica' ? 8 :
-        lista == 'listaActividadAcademicaLocalInternacional' ? 9 :
-        lista == 'listaAlumnoParticipanteProyInv' ? 10 :
-        lista == 'listaEstanciaAcademica' ? 11 :
-        lista == 'listaEstanciaAcademica' ? 12 : "");
-
-    arrayString = (
-        lista == 'listaProyecto' ? 'listaProyecto' :
-        lista == 'listaPublicacion' ? 'listaPublicacion' :
-        lista == 'listaTesis' ? 'listaTesis' :
-        lista == 'listaArticuloCientifico' ? 'listaArticuloCientifico' :
-        lista == 'listaDesarrolloTecnologico' ? 'listaDesarrolloTecnologico' :
-        lista == 'listaPonenciaEnCongreso' ? 'listaPonenciaEnCongreso' :
-        lista == 'listaPatenteDerechoDeAutor' ? 'listaPatenteDerechoDeAutor' :
-        lista == 'listaMapaBaseDeDatos' ? 'listaMapaBaseDeDatos' :
-        lista == 'listaPublicacionElectronica' ? 'listaPublicacionElectronica' :
-        lista == 'listaActividadAcademicaLocalInternacional' ? 'listaActividadAcademicaLocalInternacional' :
-        lista == 'listaAlumnoParticipanteProyInv' ? 'listaAlumnoParticipanteProyInv' :
-        lista == 'listaEstanciaAcademica' ? 'listaEstanciaAcademica' :
-        lista == 'listaEstanciaAcademica' ? 'listaEstanciaAcademica' : ""); 
-
-        return [arrayIndx, arrayString];
-
-    }
-
-
-
-
-
-function dibujarFormTabla(lista) {
-
-    listaIndx = filtro(`"${lista}"`)[0];
-
-    nombreLista = filtro(`"${lista}"`)[1];
-
-    if (lista=="listaProyecto") {
-        var contenedorForm= document.getElementById("contForm");
-        var contenedorTabla= document.getElementById("tablaResumen");
-        contenedorForm.innerHTML=formularios[listaIndx];
-        contenedorTabla.innerHTML=tablas[listaIndx]
-        contenedorTabla.classList.toggle(lista);
-        dibujaRenglones(lista,nombreLista);
-        llenaRenglones(lista,nombreLista);
-    } else {
-        var contenedorForm= document.getElementById("contForm");
-        var contenedorTabla= document.getElementById("tablaResumen");
-        contenedorForm.innerHTML=formularios[listaIndx];
-        contenedorTabla.innerHTML=tablas[listaIndx]
-
-        contenedorTabla.classList.toggle(lista)
-        
-        agregarProyectos()
-    }
-
-    
-}
-
-function cambiarSupCont(r) {
-    var contenedorForm= document.getElementById("contForm");
-    var contenedorTabla= document.getElementById("tablaResumen");
-    contenedorForm.innerHTML=formularios[r];
-    contenedorTabla.innerHTML=tablas[r]
-    
-} 
-
-function cambiarFormulario(){
-    var producto= document.getElementById("productos").value;
-    dibujarFormTabla(producto);
-
-}
-
-function dibujarResumenTablas(){
-    var contenedorForm= document.getElementById("contForm");
-    contenedorForm.innerHTML=``;
-    for (let index = 0; index < tablasEncabezado.length; index++) {
-        contenedorForm.innerHTML+=tablasEncabezado[index];
-    }
-    
-}
 
 function estiloBoton(boton) {
     listaBotones = document.getElementsByClassName("pasoBtn");
@@ -979,32 +770,95 @@ function estiloBoton(boton) {
 function moverPaso(paso){
     let instrucciones = document.getElementById("instrCont");
     let inputAux = document.getElementById("cajaInputAux");
-    let subCont1 = document.getElementById("cajaForm")
-    let subCont2 = document.getElementById("tableCont")
-    let mainCont = document.getElementById("mainCont")
+    let subCont1 = document.getElementById("contForm");
+    let subCont2 = document.getElementById("tableCont");
+    let mainCont = document.getElementById("mainCont");
     switch (paso) {
         case 1: 
+            document.getElementById("cajaTabla").remove();
+            subCont2.innerHTML=``;
+            subCont1.innerHTML=``;
+            subCont1.innerHTML=`
+            <div id="cajaForm"></div>
+            `;
+            subCont2.innerHTML=`
+            
+<div class="resumenTitle">
+    RESUMEN :
+</div>
+
+<div class="contTabla-btn">
+
+    <div class="overflowTable" id="cajaTabla">
+        
+    </div>
+
+    <div id="contBotonPaso" class="contButtonTabla">
+        
+    </div>
+</div>
+
+
+
+            `;
 
             estiloBoton(0);
+
             instrucciones.innerHTML=`
             <div class="pasoCont">
-                <div class="pasoTitCont">
-                    <div class="pasoTit">Registro de Proyectos</div>
-                </div>
-            
-                <div class="pasoDesc">
-                    Llenar la tabla mediante el <strong>formulario</strong> y el botón <strong>Agregar</strong>, Una vez terminado dar click en el boton <strong>CONTINUAR PASO 2</strong>
-                </div>
+            <div class="pasoTitCont">
+                <div class="pasoTit">Registro de Proyectos</div>
             </div>
+        
+            <div class="pasoDesc">
+                Llenar la tabla mediante el <strong>formulario</strong> y el botón <strong>Agregar</strong>, Una vez terminado dar click en el boton <strong>CONTINUAR PASO 2</strong>
+            </div>
+        </div>
             
             `;
 
-            dibujarFormTabla("listaProyecto");
-            document.getElementById("contBotonPaso").innerHTML = ` <div class="navButton" onclick="moverPaso(2)" ><div class="boton">CONTINUAR PASO 2</div></div>`;
+            inputAux.innerHTML=``;
+
+            
+            imprimeFormulario(0);
+
+            genera_tabla(listaProyectos);
+            document.getElementById("contBotonPaso").innerHTML= `<div class="navButton" onclick="moverPaso(2)">
+            <div class="boton">CONTINUAR PASO 2</div>
+        </div>`;
             break;
 
         case 2:
+            document.getElementById("cajaTabla").remove();
+            
+            subCont2.innerHTML=``;
+            subCont1.innerHTML=``;
+            subCont1.innerHTML=`
+            <div id="cajaForm"></div>
+            `;
 
+            
+            subCont2.innerHTML=`
+            
+<div class="resumenTitle">
+    RESUMEN :
+</div>
+
+<div class="contTabla-btn">
+
+    <div class="overflowTable" id="cajaTabla">
+        
+    </div>
+
+    <div id="contBotonPaso" class="contButtonTabla">
+        
+    </div>
+</div>
+
+
+
+            `;
+           
             estiloBoton(1);
             //cambia de instrucciones
             instrucciones.innerHTML=`
@@ -1040,12 +894,11 @@ function moverPaso(paso){
         </form>
             `;
             imprimeFormulario(1);
-            agregarProyectos()
 
-            document.getElementsByClassName("tabla")[0].remove();
             genera_tabla(listaPublicacion);
 
             document.getElementById("contBotonPaso").innerHTML= `<div class="navButton" onclick="moverPaso(1)" ><div class="boton">REGRESAR PASO 1</div></div><div class="navButton" onclick="moverPaso(3)" ><div class="boton">CONTINUAR PASO 3</div></div>`;
+            
             break;
             
         case 3:
@@ -1061,9 +914,11 @@ function moverPaso(paso){
                 </div>
             </div>
             `;
+
             inputAux.innerHTML=``;
             subCont1.innerHTML=``;
             subCont2.innerHTML=``;
+
             imprime_Resumen();
             // dibujarResumenTablas();
             // document.getElementById("contBotonPaso").innerHTML= `<div class="navButton" onclick="moverPaso(2)" ><div class="boton">REGRESAR PASO 2</div></div><div class="navButton" onclick="envio()"><div class="boton">FINALIZAR Y ENVIAR</div></div>`;
@@ -1094,48 +949,58 @@ var formularios= [
      // PROYECTOS
      ` 
      
-    <form name="formProyecto" class="formWrapper">
+     <form name="formProyecto" class="formWrapper" >
 
-        <div class="resumenTitle">
-            PROYECTOS
-        </div>
-    
-        <div class="formProyectos form">
-    
-            <div class="formField">
-                <div>
-                    <label for="nombreProy">Nombre de proyecto investigación:</label>
-                    <input type="text" id="nombreProy" name="nombreProy">
-                </div>
-    
-                <p>Tipo de Financiamiento:</p>
-    
-                <div class="opt">
-                    <div class="radioTop">
-                        <input type="radio" id="papiit" name="tipoProy" value="PAPIIT">
-                        <label for="papiit">PAPIIT</label><br>
-                    </div>
-                    <div class="radioTop">
-                        <input type="radio" id="papime" name="tipoProy" value="PAPIME">
-                        <label for="papime">PAPIME</label><br>
-                    </div>
-    
-                    <div class="radioBot otro">
-                        <input type="radio" id="finanOpt" name="tipoProy" value="Otro: ">
-                        <label for="finanOpt">Otro: </label><br>
-                        <input type="text" id="otroTipoProy" name="otroTipoProy">
-                    </div>
-                </div>
-    
-            </div>
-    
-        </div>
-    
-        <div class="contButton">
-            <div class="boton" onclick="capturar(0)">Agregar</div>
-        </div>
-    
-    </form>
+     <div class="resumenTitle">
+         Proyectos de Investigación:
+     </div>
+ 
+     <div class="formProyectos form">
+ 
+         <div class="formField">
+             <div>
+                 <label for="nombreProy">Nombre de proyecto investigación:</label>
+                 <input type="text" id="nombreProy" name="nombreProy">
+             </div>
+
+             <div>
+                 <label for="nombreProfesor">Profesor titular:</label>
+                 <input type="text" id="nombreProfesor" name="nombreProfesor">
+             </div>
+
+             <div>
+                 <label for="nombreProfesorAux">Profesor(es) auxiliar(es):</label>
+                 <input type="text" id="nombreProfesorAux" name="nombreProfesorAux">
+             </div>
+ 
+             <p>Tipo de Financiamiento:</p>
+ 
+             <div class="opt">
+                 <div class="radioTop">
+                     <input type="radio" id="papiit" name="tipoProy" value="PAPIIT">
+                     <label for="papiit">PAPIIT</label><br>
+                 </div>
+                 <div class="radioTop">
+                     <input type="radio" id="papime" name="tipoProy" value="PAPIME">
+                     <label for="papime">PAPIME</label><br>
+                 </div>
+ 
+                 <div class="radioBot otro">
+                     <input type="radio" id="finanOpt" name="tipoProy" value="Otro: ">
+                     <label for="finanOpt">Otro: </label><br>
+                     <input type="text" id="otroTipoProy" name="otroTipoProy">
+                 </div>
+             </div>
+ 
+         </div>
+ 
+     </div>
+ 
+     <div class="contButton">
+         <div class="boton" onclick="capturar(0)">Agregar</div>
+     </div>
+ 
+ </form>
      `,
      // PUBLICACIONES
      `
@@ -1768,442 +1633,4 @@ var formularios= [
 
 ];
 
-var tablas= [
-    // PROYECTOS
-    ` 
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Tipo de financiamiento</th>
-        <th>Otro</th>
-    </tr>
-    `,
-    // PUBLICACIONES
-    `
-    <tr>
-        <th>Nombre del Proyecto</th>
-        <th>Nombre de la Publicación</th>
-        <th>Tipo de Publicacion</th>
-        <th>Formato</th>
-        <th>ISBN</th>
-        <th>ISSN</th>
-        <th>DOI</th>
-        <th>URI</th>
-    </tr>
-    `,
-    // TESIS
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de Tesis</th>
-        <th>Grado de la Tesis</th>
-        <th>Nombre del Alumno</th>
-        <th>Fecha de término</th>
-    </tr>
-    `,
-    // ARTICULOS CIENTIFICOS PUBLICADOS
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del Artículo</th>
-        <th>Nombre del Alumno</th>
-        <th>Grado del Alumno</th>
-        <th>Fecha de Publicación</th>
-        <th>ISBN</th>
-        <th>ISSN</th>
-        <th>DOI</th>
-        <th>URI</th>
-    </tr>
-    `,
-    // DESARROLLO TECNOLOGICO
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del Desarrollo</th>
-        <th>Nombre del Responsable</th>
-        <th>Fecha</th>
-        
-    </tr>
-    `,
-    // PONENCIAS EN CONGRESOS
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de Ponencia</th>
-        <th>Nombre de Congreso</th>
-        <th>Lugar de Ponencia</th>
-        <th>Fecha de Ponencia</th>
-    </tr>
-    `,
-    // PATENTES Y/O DERECHOS DE AUTOR
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de Autor</th>
-        <th>Producto del quehacer científico</th>
-        <th>Fecha de la patente</th>
-    </tr>
-    `,
 
-    // MAPAS Y BASES DE DATOS
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del mapa y/o bases de datos</th>
-        <th>Fecha de creación</th>
-    </tr>
-    `,
-    // PUBLICACIONES ELECTRÓNICAS
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del Artículo</th>
-        <th>Fecha de publicación</th>
-        <th>ISBN</th>
-        <th>ISSN</th>
-        <th>DOI</th>
-        <th>URI</th>
-    </tr>
-    `,
-    // PARTICIPACIÓN EN ACTIVIDADES ACADÉMICAS NACIONALES Y/O INTERNACIONALES
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de la Actividad</th>
-        <th>Tipo de la actividad</th>
-        <th>Nacional / Internacional</th>
-        <th>Nombre de la Institución</th>
-        <th>Lugar del Evento</th>
-        <th>Fecha del Evento</th>
-    </tr>
-    `,
-    // ALUMNOS PARTICIPANTES EN PROYECTOS DE INVESTIGACIÓN
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del Alumno</th>
-        <th>Grado del Alumno</th>
-        <th>Tipo de Proyecto</th>
-        <th>Fecha</th>
-    </tr>
-    `,
-    // ESTANCIAS ACADÉMICAS
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de la Institución</th>
-        <th>Nacional / Internacional</th>
-        <th>Lugar de Estancia</th>
-        <th>Fecha</th>
-    </tr>
-    `,
-    // PARTICIPACIÓN EN EVENTOS DE DIVULGACIÓN Y DIFUSIÓN CIENTÍFICA ORGANIZADA POR LA ENTIDAD
-    `
-    <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de Actividad</th>
-        <th>Tipo de Actividad</th>
-        <th>Fecha de Actividad</th>
-    </tr>
-    `
-]
-
-var pasos = [
-  // Paso 1
-  ` 
-    <div class="pasoCont">
-        <div class="pasoTitCont">
-            <div class="pasoNum">PASO 1 :</div>
-            <div class="pasoTit">Registro de Proyectos</div>
-        </div>
-    
-        <div class="pasoDesc">
-        <strong>Instrucciones:</strong> Llenar el formulario correspondiente a los proyectos de investigación, en la tabla apareceran los proyectos capturados. Al terminar da click en el botón: <strong>CONTINUAR PASO 2</strong>
-        </div>
-    </div>
-    `,
-
-  // Paso 2
-  ` 
-    <div class="pasoCont">
-        <div class="pasoTitCont">
-            <div class="pasoNum">PASO 2 :</div>
-            <div class="pasoTit">Registro de Productos de Investigación</div>
-        </div>
-    
-        <div class="pasoDesc">
-            Elegir el <strong>Producto de Investigación</strong> y llenar la información correspondiente en el <strong>formulario</strong>, los datos aparecerán en la tabla inferior, una vez terminado de capturar los productos de investigación necesarios dar click en el boton <strong>CONTINUAR PASO 3</strong>
-        </div>
-    </div>
-
-    <div class="formWrapper" style="margin-bottom: 0;">
-    <div class="formField">
-        <form class="selectTipoProy">
-            <label for="productos">Producto de Investigación: </label>
-                <select name="productos" id="productos">
-                <option value="listaPublicacion">PUBLICACIONES</option>
-                <option value="listaTesis">TESIS</option>
-                <option value="listaArticuloCientifico">ARTICULOS CIENTIFICOS PUBLICADOS</option>
-                <option value="listaDesarrolloTecnologico">DESARROLLO TECNOLOGICO</option>
-                <option value="listaPonenciaEnCongreso">PONENCIAS EN CONGRESOS</option>
-                <option value="listaPatenteDerechoDeAutor">PATENTES Y/O DERECHOS DE AUTOR</option>
-                <option value="listaMapaBaseDeDatos">MAPAS Y BASES DE DATOS</option>
-                <option value="listaPublicacionElectronica">PUBLICACIONES ELECTRÓNICAS</option>
-                <option value="listaActividadAcademicaLocalInternacional">PARTICIPACIÓN EN ACTIVIDADES ACADÉMICAS NACIONALES Y/O INTERNACIONALES</option>
-                <option value="listaAlumnoParticipanteProyInv">ALUMNOS PARTICIPANTES EN PROYECTOS DE INVESTIGACIÓN</option>
-                <option value="listaEstanciaAcademica">ESTANCIAS ACADÉMICAS</option>
-                <option value="listaActividadesDivulgacionCientifica">PARTICIPACIÓN EN EVENTOS DE DIVULGACIÓN Y DIFUSIÓN CIENTÍFICA ORGANIZADA POR LA ENTIDAD</option>
-            </select>
-
-            <div class="contButton" onclick="cambiarFormulario()" >
-                <div class="boton">Ir</div>
-            </div>
-
-
-        </form>
-    </div>
-</div>
-    `,
-
-  // Paso 3
-  ` 
-    <div class="pasoCont">
-        <div class="pasoTitCont">
-            <div class="pasoNum">PASO 3 :</div>
-            <div class="pasoTit">Corroboración de datos</div>
-        </div>
-    
-        <div class="pasoDesc">
-            Revisa que la información capturada sea la correcta mediante las tablas que aparecen en pantalla y da click en el botón de: <strong>FINALIZAR Y ENVIAR</strong> para terminar el proceso.
-        </div>
-    </div>
-    `,
-];
-
-var tablasEncabezado=[
-    // PROYECTOS
-    `
-    <div class="subTitulo subForm">
-        <h2>Proyectos de Investigación:</h2>
-        <div class="line"></div>
-    </div>
-    <table>
-        <tr>
-            <th>Nombre de Proyecto</th>
-            <th>Tipo de financiamiento</th>
-            <th>Otro</th>
-        </tr>
-    </table>
-
-    `,
-    // PUBLICACIONES
-    `
-    <div class="subTitulo subForm" >
-     <h2>Publicaciones</h2>
-     <div class="line"></div>
- </div>
- <table>
-  <tr>
-        <th>Nombre del Proyecto</th>
-        <th>Nombre de la Publicación</th>
-        <th>Tipo de Publicacion</th>
-        <th>Formato</th>
-        <th>ISBN</th>
-        <th>ISSN</th>
-        <th>DOI</th>
-        <th>URI</th>
-    </tr>
- </table>
-   
-    `,
-    // TESIS
-    `
-    <div class="subTitulo subForm">
-     <h2>Tesis</h2>
-     <div class="line"></div>
- </div>
- <table>
- <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de Tesis</th>
-        <th>Grado de la Tesis</th>
-        <th>Nombre del Alumno</th>
-        <th>Fecha de término</th>
-    </tr>
- </table>
-    
-    `,
-    // ARTICULOS CIENTIFICOS PUBLICADOS
-    `
-    <div class="subTitulo subForm">
-     <h2>Articulos Cientificos</h2>
-     <div class="line"></div>
- </div>
- <table>
- <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del Artículo</th>
-        <th>Nombre del Alumno</th>
-        <th>Grado del Alumno</th>
-        <th>Fecha de Publicación</th>
-        <th>ISBN</th>
-        <th>ISSN</th>
-        <th>DOI</th>
-        <th>URI</th>
-    </tr>
- </table>
-    
-    `,
-    // DESARROLLO TECNOLOGICO
-    `
-    <div class="subTitulo subForm">
-        <h2>Proyectos de Investigación:</h2>
-        <div class="line"></div>
-    </div>
-    <table>
-  <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del Desarrollo</th>
-        <th>Nombre del Responsable</th>
-        <th>Fecha</th>
-        
-    </tr>
- </table>
-   
-    `,
-    // PONENCIAS EN CONGRESOS
-    `
-    <div class="subTitulo subForm">
-        <h2>PONENCIAS EN CONGRESOS:</h2>
-        <div class="line"></div>
-    </div>
-    <table>
- <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de Ponencia</th>
-        <th>Nombre de Congreso</th>
-        <th>Lugar de Ponencia</th>
-        <th>Fecha de Ponencia</th>
-    </tr>
- </table>
-    
-    `,
-    // PATENTES Y/O DERECHOS DE AUTOR
-    `
-    <div class="subTitulo subForm">
-        <h2>PATENTES Y/O DERECHOS DE AUTOR:</h2>
-        <div class="line"></div>
-    </div>
-    <table>
- <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de Autor</th>
-        <th>Producto del quehacer científico</th>
-        <th>Fecha de la patente</th>
-    </tr>
- </table>
-    `,
-
-    // MAPAS Y BASES DE DATOS
-    `
-    <div class="subTitulo subForm">
-        <h2>MAPAS Y BASES DE DATOS: </h2>
-        <div class="line"></div>
-    </div>
-    <table>
- <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del mapa y/o bases de datos</th>
-        <th>Fecha de creación</th>
-    </tr>
- </table>
-    
-    `,
-    // PUBLICACIONES ELECTRÓNICAS
-    `
-    <div class="subTitulo subForm">
-        <h2>PUBLICACIONES ELECTRÓNICAS</h2>
-        <div class="line"></div>
-    </div>
-    <table>
- <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del Artículo</th>
-        <th>Fecha de publicación</th>
-        <th>ISBN</th>
-        <th>ISSN</th>
-        <th>DOI</th>
-        <th>URI</th>
-    </tr>
- </table>
-    
-    `,
-    // PARTICIPACIÓN EN ACTIVIDADES ACADÉMICAS NACIONALES Y/O INTERNACIONALES
-    `
-    <div class="subTitulo subForm">
-        <h2>PARTICIPACIÓN EN ACTIVIDADES ACADÉMICAS NACIONALES Y/O INTERNACIONALES</h2>
-        <div class="line"></div>
-    </div>
-    <table>
- <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de la Actividad</th>
-        <th>Tipo de la actividad</th>
-        <th>Nacional / Internacional</th>
-        <th>Nombre de la Institución</th>
-        <th>Lugar del Evento</th>
-        <th>Fecha del Evento</th>
-    </tr>
- </table>
-    
-    `,
-    // ALUMNOS PARTICIPANTES EN PROYECTOS DE INVESTIGACIÓN
-    `
-    <div class="subTitulo subForm">
-        <h2>ALUMNOS PARTICIPANTES EN PROYECTOS DE INVESTIGACIÓN:</h2>
-        <div class="line"></div>
-    </div>
-    <table>
-  <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre del Alumno</th>
-        <th>Grado del Alumno</th>
-        <th>Tipo de Proyecto</th>
-        <th>Fecha</th>
-    </tr>
- </table>
-   
-    `,
-    // ESTANCIAS ACADÉMICAS
-    `
-    <div class="subTitulo subForm">
-        <h2>ESTANCIAS ACADÉMICAS:</h2>
-        <div class="line"></div>
-    </div>
-    <table>
-  <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de la Institución</th>
-        <th>Nacional / Internacional</th>
-        <th>Lugar de Estancia</th>
-        <th>Fecha</th>
-    </tr>
- </table>
-   
-    `,
-    // PARTICIPACIÓN EN EVENTOS DE DIVULGACIÓN Y DIFUSIÓN CIENTÍFICA ORGANIZADA POR LA ENTIDAD
-    `
-    <div class="subTitulo subForm">
-        <h2>PARTICIPACIÓN EN EVENTOS DE DIVULGACIÓN Y DIFUSIÓN CIENTÍFICA ORGANIZADA POR LA ENTIDAD:</h2>
-        <div class="line"></div>
-    </div>
-    <table>
- <tr>
-        <th>Nombre de Proyecto</th>
-        <th>Nombre de Actividad</th>
-        <th>Tipo de Actividad</th>
-        <th>Fecha de Actividad</th>
-    </tr>
- </table>
-    
-    `
-];
