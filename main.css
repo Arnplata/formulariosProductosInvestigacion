@@ -507,5 +507,9 @@ width: 100%;
 }
 
 #tableCont{
-  height: 25em;
+}
+
+#cajaInputAux{
+  width: 100%;
+  padding-left: 3em;
 }
