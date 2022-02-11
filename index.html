@@ -14,7 +14,7 @@
 <body>
 
    
-<section class="hder">
+<section class="hder" >
     <div>
         <h1>PRODUCTOS DE INVESTIGACIÓN DE LOS PROFESORES DE CARRERA</h1>
         <div class="subTitulo">
@@ -51,13 +51,9 @@
 
 
 <section id="mainCont">
-    <div id="cajaInputAux">
+    <div id="cajaInputAux"></div>
 
-    </div>
     <div class="tableWrapper" id="contForm">
-
-        
-        
 
        <div id="cajaForm" >
 
@@ -73,6 +69,16 @@
                     <div>
                         <label for="nombreProy">Nombre de proyecto investigación:</label>
                         <input type="text" id="nombreProy" name="nombreProy">
+                    </div>
+
+                    <div>
+                        <label for="nombreProfesor">Profesor titular:</label>
+                        <input type="text" id="nombreProfesor" name="nombreProfesor">
+                    </div>
+
+                    <div>
+                        <label for="nombreProfesorAux">Profesor(es) auxiliar(es):</label>
+                        <input type="text" id="nombreProfesorAux" name="nombreProfesorAux">
                     </div>
         
                     <p>Tipo de Financiamiento:</p>
@@ -121,8 +127,9 @@
                     <table id="tablaResumen" class="tabla">
                         <tr class="anclado">
                             <th>Nombre de Proyecto</th>
+                            <th>Profesor titular</th>
+                            <th>Profesor auxiliar</th>
                             <th>Tipo de financiamiento</th>
-                            <th>Otro</th>
                         </tr>
                         
                     </table>
@@ -146,25 +153,7 @@
 
 
 
-<section>
 
-
-
-
-
-
-
-
-
-
-
-<!-- <div id="contBotonPaso" >
-    <div class="navButton" onclick="moverPaso(2)" >
-        <div class="boton">CONTINUAR PASO 2</div>
-    </div>
-</div> -->
-
-</section>
 
 </body>
 </html>
